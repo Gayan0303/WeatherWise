@@ -12,7 +12,7 @@ def index():
 @app.route('/weather', methods=['POST'])  # Endpoint for handling POST requests
 def get_weather():
     city = request.form['city']
-    api_key = '9074344fd51c721b9a4c474fe71ac966'
+    api_key = '<-ENTER YOUR API KEY HERE->'
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
     response = requests.get(url)
     if response.status_code == 200:
